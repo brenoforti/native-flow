@@ -1,0 +1,97 @@
+.navbar {
+  background-color: var(--white-color);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 2rem;
+}
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-grey);
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.nav-link {
+  color: var(--text-color);
+  margin: 0 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color);
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+.nav-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transition: background-color 0.3s ease;
+}
+.nav-button:hover {
+  background-color: var(--primary-hover-color);
+  color: var(--white-color);
+}
+.nav-button::after { display: none; }
+.menu-icon { display: none; cursor: pointer; }
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-grey);
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    transition: all 0.5s ease;
+    background: var(--white-color);
+  }
+  .nav-menu.active { left: 0; }
+  .nav-link { padding: 2rem; width: 100%; }
+  .menu-icon { display: block; }
+  .menu-icon .bar1-open { transform: rotate(-45deg) translate(-5px, 6px); }
+  .menu-icon .bar2-open { opacity: 0; }
+  .menu-icon .bar3-open { transform: rotate(45deg) translate(-5px, -6px); }
+}
