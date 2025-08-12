@@ -27,9 +27,9 @@
 ---
 
 ## 📦 Installation & Usage
-bash
+```bash
 # Clone the repository
-git clone https://github.com/seu-usuario/native-flow.git
+git clone https://github.com/brenoforti/native-flow.git
 
 # Access the project folder
 cd native-flow
@@ -39,6 +39,7 @@ npm install
 
 # Run the development server
 npm run dev
+```
 
 ---
 
