@@ -52,5 +52,7 @@ Responsive-first approach using modern CSS techniques.
 
 SEO best practices applied through semantic HTML and proper metadata.
 
+---
+
 # 📜 License
 This project is licensed under the MIT License — feel free to use and modify it.
